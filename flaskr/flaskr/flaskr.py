@@ -34,7 +34,18 @@ def fncall():
 	ss = smartsheet.Smartsheet(access_token)
 	ss.errors_as_exceptions(True)
 	sheet = ss.Sheets.get_sheet(sheet_id)
-
+	global r1 
+	r1 = []
+	global r2
+	r2 = []
+	global r3
+	r3 = []
+	global r4
+	r4 = []
+	global r5
+	r5 = []
+	global r6
+	r6 = []
 
 
 	def get_cell_by_column_name(row, column_ame):
@@ -43,9 +54,10 @@ def fncall():
 
 	def evaluate_row_and_build_updates(source_row):
 	    # Find the cell and value we want to evaluate
-	    status_celltype1 = get_cell_by_column_name(source_row, "Status")
-	    status_valuetype1 = status_celltype1.display_value
-	    if (status_valuetype1 == "Lost"):
+	    
+	    
+	        status_celltype1 = get_cell_by_column_name(source_row, "Status")
+	        status_valuetype1 = status_celltype1.display_value
 	        #remaining_cell = get_cell_by_column_name(source_row, "Remaining`111")
 	        print("Row #" + str(source_row.row_number))
 	        global project_cell
@@ -54,7 +66,8 @@ def fncall():
 	        project_value = project_cell.display_value
 	        global result
 	        result = jsonify(project_value)
-	        print(str(project_value))
+	        
+	        
 
 	        description_cell = get_cell_by_column_name(source_row, "Description")
 	        description_value = description_cell.display_value
@@ -75,68 +88,28 @@ def fncall():
 	        info_value = info_cell.display_value
 	        print(str(info_value))
 
+	        if (status_valuetype1 == "Lost"):
+	        	r1.append(project_value)
+	        	print(str(project_value))
+	        	r2.append(description_value)
+	        	print(str(description_value))
+	        	r3.append(customers_value)
+	        	print(str(customers_value))
+	        	r4.append(techlead_value)
+	        	print(str(techlead_value))
+	        	r5.append(status_valuetype1)
+	        	print(str(status_valuetype1))
+	        	r6.append(info_value)
+	        	print(str(info_value))
 
 
 
-	    status_celltype2 = get_cell_by_column_name(source_row, "Status")
-	    status_valuetype2 = status_celltype2.display_value       
-
-	    if (status_valuetype2 == "Active"):
-	        #remaining_cell = get_cell_by_column_name(source_row, "Remaining`111")
-	        print("Row #" + str(source_row.row_number))
-	        project_cell = get_cell_by_column_name(source_row, "Project Name")
-	        project_value2 = project_cell.display_value	       
-	        print(str(project_value2))
-
-	        description_cell = get_cell_by_column_name(source_row, "Description")
-	        description_value = description_cell.display_value
-	        print(str(description_value))
-
-	        customers_cell = get_cell_by_column_name(source_row, "Key Customer")
-	        customers_value = customers_cell.display_value
-	        print(str(customers_value))
-
-	        techlead_cell = get_cell_by_column_name(source_row, "Tech Lead")
-	        techlead_value = techlead_cell.display_value
-	        print(str(techlead_value))
-
-	        
-	        print(str(status_valuetype2))
-
-	        info_cell = get_cell_by_column_name(source_row, "Additional Info")
-	        info_value = info_cell.display_value
-	        print(str(info_value))
 
 
-	    status_celltype3 = get_cell_by_column_name(source_row, "Status")
-	    status_valuetype3 = status_celltype3.display_value  
-
-	    if (status_valuetype3 == "Inactive"):
-	        #remaining_cell = get_cell_by_column_name(source_row, "Remaining`111")
-	        print("Row #" + str(source_row.row_number))
-	        project_cell = get_cell_by_column_name(source_row, "Project Name")
-	        project_value3 = project_cell.display_value
-	        print(str(project_value3))
-
-	        description_cell = get_cell_by_column_name(source_row, "Description")
-	        description_value = description_cell.display_value
-	        print(str(description_value))
-
-	        customers_cell = get_cell_by_column_name(source_row, "Key Customer")
-	        customers_value = customers_cell.display_value
-	        print(str(customers_value))
-
-	        techlead_cell = get_cell_by_column_name(source_row, "Tech Lead")
-	        techlead_value = techlead_cell.display_value
-	        print(str(techlead_value))
-
-	        
-	        print(str(status_valuetype3))
-
-	        info_cell = get_cell_by_column_name(source_row, "Additional Info")
-	        info_value = info_cell.display_value
-	        print(str(info_value))            
-
+            
+	    
+	    
+	   
 	#resulting=jsonify(project_value)       
 
 	for column in sheet.columns:
@@ -147,10 +120,23 @@ def fncall():
 	for row in sheet.rows:
 	    evaluate_row_and_build_updates(row)
 
-	result = str(project_value)
-	print(result)    
-	    
+	for i in r1:
+		print(i)
+
 
 	
-	return jsonify(json1=result)	
+	#for i in x:
+	#	print(i)
+
+	#for row in sheet.rows:
+	result = r1
+	secresult = r2
+	thirdresult = r3
+	fourthresult = r4
+	fifthresult = r5
+	sixthresult = r6
+	#print(result)   
+
+	
+	return jsonify(json1=result, json2 = secresult, json3 = thirdresult, json4 = fourthresult, json5 = fifthresult, json6 = sixthresult)	
 

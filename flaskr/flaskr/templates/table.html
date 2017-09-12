@@ -123,7 +123,8 @@
                                 <p class="category">We have people on the team currently making progress, regardless of whether it’s consumable yet or not</p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped" id="activetable">
+                                <table class="table table-hover table-striped" id="activetable" class = "activetable" name = "activetable">
+
                                     <thead>
                                         <th>Project Name</th>
                                     	<th>Description</th>
@@ -132,18 +133,9 @@
                                     	<th>Status</th>
                                         <th>Additional Info</th>
                                     </thead>
-                                    <tbody id="activebody">
-                                    <tr>
-                                            <td><span id="result1"> </span></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                        </tr>
-
-                                    </tbody>
+                                    
                                 </table>
+                                <div id="activezz" name = "activezz" class = "activezz"> </div>
 
                             </div>
                         </div>
@@ -423,9 +415,6 @@
 
 
 
-    
-
-
 
 <script type=text/javascript>
   $(function() {
@@ -438,8 +427,93 @@
             
             success: function(data) {
 
-                console.log(data.json1);
-                $("#result1").text(data.json1);
+                //console.log(data.json1[1]);
+                var len = data.json1.length;
+                //for(i=0;i<=len;i++)
+                //{
+                //var x = document.createElement("SPAN");
+                //var t = document.createTextNode(data.json1[i]);
+                //x.appendChild(t);
+                //var sp = document.getElementById('result2');
+                //sp.innerHTML += x;
+
+                
+
+                //var newTablerow=document.createElement('div');
+                //var html = '<tbody id="incompbody">';
+                //var lst = Object.keys(data.json1);
+                //for(var i = 0; i < data.json1.length; i++) {
+                //    html += "<tr value='incomp-row"+ i +"' id='incomp-row" + i + "' name='incomp-row" + i + "'>" + data.json1[i] + "</tr>";
+                //}
+                //html += '</tbody>';
+                //newTablerow.innerHTML= html;
+                //document.getElementById("activezz").appendChild(newTablerow);
+
+
+                
+                var table = document.getElementById("activetable");
+                //var emptyRow = document.getElementById("empty");
+                //if(emptyRow){
+                //    emptyRow.parentNode.removeChild(emptyRow)
+                //}
+                for(var i = 0; i < data.json1.length; i++)
+                {
+                    var newRow1 = data.json1[i];
+                    var newRow2 = data.json2[i];
+                    var newRow3 = data.json3[i];
+                    var newRow4 = data.json4[i];
+                    var newRow5 = data.json5[i];
+                    var newRow6 = data.json6[i];
+                    //var newList = [newRow1, newRow2, newRow3, newRow4, newRow5, newRow6]
+                    var tr = document.createElement('tr');
+                    var td1 = tr.appendChild(document.createElement('td'));
+                    var td2 = tr.appendChild(document.createElement('td'));
+                    var td3 = tr.appendChild(document.createElement('td'));
+                    var td4 = tr.appendChild(document.createElement('td'));
+                    var td5 = tr.appendChild(document.createElement('td'));
+                    var td6 = tr.appendChild(document.createElement('td'));
+
+                    td1.innerHTML = newRow1;
+                    td2.innerHTML = newRow2;
+                    td3.innerHTML = newRow3;
+                    td4.innerHTML = newRow4;
+                    td5.innerHTML = newRow5;
+                    td6.innerHTML = newRow6;
+                    
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    tr.appendChild(td5);
+                    tr.appendChild(td6);
+
+                    table.appendChild(tr);
+
+                   
+
+
+                }
+
+
+
+                for(var i = 0; i < data.json2.length; i++)
+                {
+                 
+                    var tr = document.createElement('tr');
+                    var td = tr.appendChild(document.createElement('td'));
+                    td.innerHTML = newRow2;
+                    tr.appendChild(td);
+                    table.appendChild(tr);
+                }
+                
+                   //$("#result2").text(data.json1[i]);
+                   //console.log(data.json1[i]);
+                  //  html1 = 
+                  //  html1 += "<option value='sgt-policy-matrix"+ i +"' id='sgt-policy-matrix" + i + "' name='sgt-policy-matrix" + i + "'>" + lst[i] + " (" + data.result[lst[i]] + ")" +"</option>";
+
+                //}    
+                console.log(len);
+                //$("#result2").text(data.json1);
 
                 console.log('Hello');
             }
