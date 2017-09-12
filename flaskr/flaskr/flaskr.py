@@ -47,6 +47,19 @@ def fncall():
 	global r6
 	r6 = []
 
+	global c1 
+	c1 = []
+	global c2
+	c2 = []
+	global c3
+	c3 = []
+	global c4
+	c4 = []
+	global c5
+	c5 = []
+	global c6
+	c6 = []
+
 
 	def get_cell_by_column_name(row, column_ame):
 	    column_id = column_map[column_ame]
@@ -103,6 +116,21 @@ def fncall():
 	        	print(str(info_value))
 
 
+	        if (status_valuetype1 == "Complete"):
+	        	c1.append(project_value)
+	        	print(str(project_value))
+	        	c2.append(description_value)
+	        	print(str(description_value))
+	        	c3.append(customers_value)
+	        	print(str(customers_value))
+	        	c4.append(techlead_value)
+	        	print(str(techlead_value))
+	        	c5.append(status_valuetype1)
+	        	print(str(status_valuetype1))
+	        	c6.append(info_value)
+	        	print(str(info_value))
+
+
 
 
 
@@ -124,6 +152,8 @@ def fncall():
 		print(i)
 
 
+
+
 	
 	#for i in x:
 	#	print(i)
@@ -137,6 +167,14 @@ def fncall():
 	sixthresult = r6
 	#print(result)   
 
+	ctab1 = c1
+	ctab2 = c2
+	ctab3 = c3
+	ctab4 = c4
+	ctab5 = c5
+	ctab6 = c6
+
+
 	
-	return jsonify(json1=result, json2 = secresult, json3 = thirdresult, json4 = fourthresult, json5 = fifthresult, json6 = sixthresult)	
+	return jsonify(json1=result, json2 = secresult, json3 = thirdresult, json4 = fourthresult, json5 = fifthresult, json6 = sixthresult, cson1 = ctab1, cson2 = ctab2, cson3 = ctab3, cson4 = ctab4, cson5 = ctab5, cson6 = ctab6)	
 

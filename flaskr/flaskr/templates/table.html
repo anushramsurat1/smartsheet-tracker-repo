@@ -123,7 +123,7 @@
                                 <p class="category">We have people on the team currently making progress, regardless of whether it’s consumable yet or not</p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped" id="activetable" class = "activetable" name = "activetable">
+                                <table class="table table-hover table-striped" id="archivetable" class = "archivetable" name = "archivetable">
 
                                     <thead>
                                         <th>Project Name</th>
@@ -145,11 +145,11 @@
                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Completed Projects</h4>
+                                <h4 class="title">Complete Projects</h4>
                                 <p class="category">Nobody is currently making progress but there are demos and repos available for broader use</p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
+                                <table class="table table-hover table-striped" id="completetable" class = "completetable" name = "completetable">
                                         <thead>
                                         <th>Project Name</th>
                                         <th>Description</th>
@@ -158,65 +158,7 @@
                                         <th>Status</th>
                                         <th>Additional Info</th>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>Dakota Rice aaaaaa aaaaa aaaaaaaa aaaaaaaaa aaaaaaaa aaaaaaa aaaaa aaaaaaaaaaa aaaaaaaaaaaaaaaaa aaaa</td>
-                                            <td>$36,738</td>
-                                            <td>Niger</td>
-                                            <td>Oud-Turnhout</td>
-                                            <td>Oud-Turnhout</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>Minerva Hooper</td>
-                                            <td>$23,789</td>
-                                            <td>Curaçao</td>
-                                            <td>Sinaai-Waas</td>
-                                            <td>Sinaai-Waas</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>Sage Rodriguez</td>
-                                            <td>$56,142</td>
-                                            <td>Netherlands</td>
-                                            <td>Baileux</td>
-                                            <td>Baileux</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>Philip Chaney</td>
-                                            <td>$38,735</td>
-                                            <td>Korea, South</td>
-                                            <td>Overland Park</td>
-                                            <td>Overland Park</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>Doris Greene</td>
-                                            <td>$63,542</td>
-                                            <td>Malawi</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                            <td>Feldkirchen in Kärnten</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                         <tr>
-                                            <td>6</td>
-                                            <td>Mason Porter</td>
-                                            <td>$78,615</td>
-                                            <td>Chile</td>
-                                            <td>Gloucester</td>
-                                            <td>Gloucester</td>
-                                        </tr>
-                                    </tbody>
-
+                                    
                                 </table>
 
                             </div>
@@ -451,7 +393,8 @@
 
 
                 
-                var table = document.getElementById("activetable");
+                var table = document.getElementById("archivetable");
+                var table2 = document.getElementById("completetable");
                 //var emptyRow = document.getElementById("empty");
                 //if(emptyRow){
                 //    emptyRow.parentNode.removeChild(emptyRow)
@@ -496,15 +439,46 @@
 
 
 
-                for(var i = 0; i < data.json2.length; i++)
+                for(var i = 0; i < data.cson1.length; i++)
                 {
-                 
-                    var tr = document.createElement('tr');
-                    var td = tr.appendChild(document.createElement('td'));
-                    td.innerHTML = newRow2;
-                    tr.appendChild(td);
-                    table.appendChild(tr);
+                    var compRow1 = data.cson1[i];
+                    var compRow2 = data.cson2[i];
+                    var compRow3 = data.cson3[i];
+                    var compRow4 = data.cson4[i];
+                    var compRow5 = data.cson5[i];
+                    var compRow6 = data.cson6[i];
+                    //var newList = [newRow1, newRow2, newRow3, newRow4, newRow5, newRow6]
+                    var trcomp = document.createElement('tr');
+                    var tdcomp1 = tr.appendChild(document.createElement('td'));
+                    var tdcomp2 = tr.appendChild(document.createElement('td'));
+                    var tdcomp3 = tr.appendChild(document.createElement('td'));
+                    var tdcomp4 = tr.appendChild(document.createElement('td'));
+                    var tdcomp5 = tr.appendChild(document.createElement('td'));
+                    var tdcomp6 = tr.appendChild(document.createElement('td'));
+
+                    tdcomp1.innerHTML = compRow1;
+                    tdcomp2.innerHTML = compRow2;
+                    tdcomp3.innerHTML = compRow3;
+                    tdcomp4.innerHTML = compRow4;
+                    tdcomp5.innerHTML = compRow5;
+                    tdcomp6.innerHTML = compRow6;
+                    
+                    trcomp.appendChild(tdcomp1);
+                    trcomp.appendChild(tdcomp2);
+                    trcomp.appendChild(tdcomp3);
+                    trcomp.appendChild(tdcomp4);
+                    trcomp.appendChild(tdcomp5);
+                    trcomp.appendChild(tdcomp6);
+
+                    table2.appendChild(trcomp);
+
+                   
+
+
                 }
+
+
+
                 
                    //$("#result2").text(data.json1[i]);
                    //console.log(data.json1[i]);
