@@ -1,0 +1,414 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CleverAdmin - Bootstrap Admin Template">
+	<meta name="author" content="Łukasz Holeczek">
+	<meta name="keyword" content="CleverAdmin, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="../static/ico/apple-touch-icon-114-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="../static/ico/apple-touch-icon-72-precomposed.png">
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="../static/ico/apple-touch-icon-57-precomposed.png">
+	<link rel="shortcut icon" href="../static/ico/favicon.png">
+
+    <title>ISE PoC</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/css/bootstrap.min.css" rel="stylesheet">
+	
+	<!-- page css files -->
+	<link href="../static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="../static/css/jquery-ui.min.css" rel="stylesheet">	
+
+    <!-- Custom styles for this template -->
+    <link href="../static/css/style.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+</head>
+
+<body>
+	<!-- start: Header -->
+<div class="navbar" role="navigation">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar">a</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="form-wizard.html#"><img src="../static/img/rsz_2cisco.png" height="80" width="45"> ISE PoC</a>
+        </div>
+		<ul class="nav navbar-nav navbar-actions navbar-left">
+			<li><a href="form-wizard.html#" id="main-menu-toggle"><i class="fa fa-bars"></i></a></li>
+		</ul>
+        
+	</div>
+</div>
+
+<!-- end: Header -->
+
+	<div class="container-fluid content">
+	<div class="row">
+			
+		<!-- start: Main Menu -->
+		<div class="sidebar col-md-2 col-sm-1 ">		
+			<div class="sidebar-collapse collapse">	
+				<div class="nav-sidebar title"><span>Main Menu</span></div>
+				<ul class="nav nav-sidebar">
+					<li>
+						<a class="dropmenu" href="form-wizard.html#"><i class="fa fa-edit"></i><span class="hidden-sm text"> Third Party Provisioning</span> <span class="chevron closed"></span></a>
+						<ul>
+							<li><a class="submenu" href="form-wizard.html"><i class="fa fa-edit"></i><span class="hidden-sm text"> Add Third Party</span></a></li>
+							<li><a class="submenu" href="form-dropzone.html"><i class="fa fa-edit"></i><span class="hidden-sm text"> Delete Third Party</span></a></li>
+							<li><a class="submenu" href="form-elements.html"><i class="fa fa-edit"></i><span class="hidden-sm text"> Update Third Party</span></a></li>
+						</ul>
+					</li>
+			</div>
+								<a href="form-wizard.html#" id="main-menu-min" class="full visible-md visible-lg"><i class="fa fa-angle-double-left"></i></a>
+						</div>
+		<!-- end: Main Menu -->
+					
+		<!-- start: Content -->
+		<div class="col-md-10 col-sm-11 main ">
+		
+		
+		<div class="row" style="width:2450px; height:2000px; position: absolute; top: 0; right: 0; bottom: 0; left: 0;">
+			
+			<div class="col-md-6">
+				<div class="panel panel-default">
+					<div class="panel-heading"></div>
+					<div class="panel-body">
+						
+						<div id="wizard1" class="wizard-type1" >
+							<ul class="steps">
+							  	<li><a href="form-wizard.html#tab11" data-toggle="tab"><span class="badge badge-info">1</span> Create SGT</a></li>
+								<li><a href="form-wizard.html#tab12" data-toggle="tab"><span class="badge badge-info">2</span> Create IP to SGT Mapping</a></li>
+								<li><a href="form-wizard.html#tab13" data-toggle="tab"><span class="badge badge-info">3</span> Create SGACL</a></li>
+								<li><a href="form-wizard.html#tab14" data-toggle="tab"><span class="badge badge-info">4</span> Apply SGACL </a></li>
+							</ul>
+							<div class="progress thin">
+								<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">
+								</div>
+							</div>
+							
+							
+							
+							<div class="tab-content">
+							    <div class="tab-pane" id="tab11">
+							    	<form class="form-horizontal" role="form">
+
+							    	<h3><b>Create New SGT on ISE </b> </h3>
+							    	<br/>
+							    	<br/>
+
+										<div class="form-group">
+								    	<label for="sgt-name">Name*</label>
+								    	<input type="text" class="form-control" id="sgt-name" name="sgt-name" placeholder="Enter Security Group Name" required="required">
+								  	</div>
+								  	<br/>
+								  	<br/>
+
+									<div class="form-group">
+								    	<label for="sgt-description">Description</label>
+								    	<br/>
+								    	<textarea rows="4" cols="50" id="sgt-name" name="sgt-description">
+										
+										</textarea>
+								  	</div>
+
+									<br/>
+
+									<input type="button" class="btn btn-success button-next" name="create-sgt-submit" id="create-sgt-submit" value="Submit" />
+
+									
+							    	</form>	
+
+							    </div>
+
+							    <div class="tab-pane" id="tab12">
+
+							    	<form class="form-horizontal" role="form">
+
+							 				<h3><b>Create IP to SGT Mapping </b></h3>
+							 				<br/>
+							 				<br/>
+
+							    	<div class="form-group" >
+
+							    		<label for="ip-sgt-hostname">Choose an option*</label>
+							    		
+							    		<br/>
+
+								    	<select>
+										  <option selected disabled hidden>     Select</option>
+										  <option value="IPAddress" name="ip-sgt-hostname" id="ip-sgt-hostname">IP Address (es)</option>
+										  <option value="Hostname" name="ip-sgt-hostname" id="ip-sgt-hostname">Hostname</option>
+										 
+										</select>
+										<br/>
+
+										<div class="form-group">
+										<br/>
+										<br/>
+										<br/>
+
+										<label for="ip-sgt-hostname">Specify Value</label>
+										<br/>
+
+
+								    	<input type="text" class="form-control" id="ip-sgt-hostname" name = "ip-sgt-hostname">
+								  	</div>
+
+												</div>
+
+									<br/>
+									<br/>
+
+									<div class="form-group">
+										
+
+								    	<label for="ip-sgt-sgt">SGT*</label>
+							    		<br/>
+
+								    	<select>
+										  <option selected disabled hidden>     Select</option>
+										  <option value="ip-sgt-sgt" id="ip-sgt-sgt" name="ip-sgt-sgt">Sample 1</option>
+										  <option value="ip-sgt-sgt" id="ip-sgt-sgt" name="ip-sgt-sgt">Sample 2</option>
+										 
+										</select>
+								  	</div>
+								  	<br/>
+									<br/>
+
+									<div class="row">
+
+								  		<div class="form-group col-sm-8">
+									    	<label for="ip-sgt-deployedTo">Deploy to Devices</label>
+							    		<br/>
+
+								    	<select>
+										  <option selected disabled hidden>     Select</option>
+										  <option value="ip-sgt-deployedTo" id="ip-sgt-deployedTo" name="ip-sgt-deployedTo">Sample 1</option>
+										  <option value="ip-sgt-deployedTo" id="ip-sgt-deployedTo" name="ip-sgt-deployedTo">Sample 2</option>
+										 
+										</select>
+									  	</div>
+
+										
+
+									</div><!--/row-->
+									<br/>
+									<input type="button" class="btn btn-success button-next" name="create-ip-sgt-submit" id="create-ip-sgt-submit" value="Submit" />
+
+									</form>
+								</div>
+								
+
+								<div class="tab-pane" id="tab13">
+								<form class="form-horizontal" role="form">
+
+								<h3><b>Create New SGACL on ISE </b></h3>
+										<br/>
+										<br/>
+									<div class="form-group">
+								    	<label for="sgacl-name">Name*</label>
+								    	<input type="text" class="form-control" id="sgacl-name"  name="sgacl-name" placeholder="Enter ACL Name" required>
+								  	</div>
+								  	<br/>
+									<br/>
+
+									<div class="form-group">
+								    	<label for="company-w1">Description</label>
+								    	<input type="text" class="form-control" id="sgacl-description"  name="sgacl-description" placeholder="Enter Description">
+								  	</div>
+								  	<br/>
+									<br/>
+
+									<div class="form-group">
+								    	<label for="sgacl-acl">Security Group ACL Content*</label>
+								    	<br/>
+								    	<textarea rows="4" cols="50">
+										
+										</textarea>	
+									</div>
+									<br/>
+									<br/>
+
+									<div class="row">
+
+								  		<div class="form-group col-sm-8">
+									    	<label for="sgacl-ipversion">IP Version</label> <br/>
+									    	  <input type="radio" value="IPv4" id="sgacl-ipversion"  name="sgacl-ipversion"> IPv4
+									    	  <input type="radio" value="IPv6" id="sgacl-ipversion"  name="sgacl-ipversion"> IPv6
+									    	  <input type="radio" value="Agnostic" id="sgacl-ipversion"  name="sgacl-ipversion"> Agnostic
+
+
+
+									  	</div>
+
+										
+
+									</div><!--/row-->
+									<br/>
+									<input type="button" class="btn btn-success button-next" name="create-sgacl-submit" id="create-sgacl-submit" value="Submit" />
+
+									</form>
+									
+							    </div>
+								<div class="tab-pane" id="tab14">
+									
+							    </div>
+					
+							</div>
+							
+							
+								
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div><!--/col-->
+			
+			
+							</div>	
+						</div>
+
+					</div>
+
+				</div>
+				
+			</div><!--/col-->
+
+		</div><!--/row-->
+
+				
+		</div>
+		<!-- end: Content -->
+			
+			</div><!--/row-->		
+	
+</div><!--/container-->
+	
+
+<div class="modal fade" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				<h4 class="modal-title">Modal title</h4>
+			</div>
+			<div class="modal-body">
+				<p>Here settings can be configured...</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+				<button type="button" class="btn btn-primary">Save changes</button>
+			</div>
+		</div><!-- /.modal-content -->
+	</div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="clearfix"></div>
+
+<footer>
+	
+	<div class="row">
+		
+		<div class="col-sm-5">
+			&copy; 2017 Cisco Systems, Inc. 
+		</div><!--/.col-->
+		
+		<div class="col-sm-7 text-right">
+			Cisco Innovation Edge
+		</div><!--/.col-->	
+		
+	</div><!--/.row-->	
+
+</footer>
+	
+<!-- start: JavaScript-->
+<!--[if !IE]>-->
+
+		<script src="../scripts/jquery-3.1.0.min.js"></script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+
+	<script src="../scripts/jquery-1.11.0.min.js"></script>
+
+<![endif]-->
+
+<!--[if !IE]>-->
+	<script type="text/javascript">
+		window.jQuery || document.write("<script src='../scripts/jquery-3.1.0.min.js'>"+"<"+"/script>");
+	</script>
+
+<!--<![endif]-->
+
+<!--[if IE]>
+
+	<script type="text/javascript">
+ 	window.jQuery || document.write("<script src='../scripts/jquery-1.11.0.min.js'>"+"<"+"/script>");
+	</script>
+	
+<![endif]-->
+<script src="../scripts/jquery-migrate-1.4.1.min.js"></script>
+<script src="../scripts/bootstrap.min.js"></script>	
+
+
+<!-- page scripts -->
+<script src="../scripts/jquery-ui.min.js"></script>
+<script src="../scripts/jquery.sparkline.min.js"></script>
+<script src="../scripts/jquery.chosen.min.js"></script>
+<script src="../scripts/jquery.autosize.min.js"></script>
+<script src="../scripts/jquery.placeholder.min.js"></script>
+<script src="../scripts/jquery.bootstrap.wizard.min.js"></script>
+<script src="../scripts/jquery.maskedinput.min.js"></script>
+
+<!-- theme scripts -->
+<script src="../scripts/custom.min.js"></script>
+<script src="../scripts/core.min.js"></script>
+
+<!-- inline scripts related to this page -->
+<script src="../scripts/pages/form-wizard.js"></script>
+
+<!-- end: JavaScript-->
+
+<script type=text/javascript>
+        $(function() {
+            $(“#create-sgt-submit").click(function() {
+            var sgtName = $('input[name=“sgt-name”]’).val();
+            var sgtDescription = $('input[name=“sgt-description”]’).val();
+            $.ajax({
+            type: "GET",
+            url: $SCRIPT_ROOT + "/ise-wizard",
+            contentType: "application/json; charset=utf-8",
+          
+
+            data: { sgtName: sgtName, sgtDescription: sgtDescription},
+            success: function(data) {                   
+                $('#echoResult').text(data.value);
+            }
+        });     
+    });
+  });
+    </script>
+
+      
+
+
+
+</body>
+</html>
