@@ -71,16 +71,18 @@
     	<div class="sidebar-wrapper">
             <div class="logo">
                 <a href="http://www.creative-tim.com" class="simple-text">
-                    PROJECT DASHBOARD
+                    <b>IE PROJECT DASHBOARD PORTAL</b>
                 </a>
             </div>
 
             <ul class="nav">
-            
+            <br/>
+                    
                 <li class="active">
                     <a href="table.html">
+
                         <i class="pe-7s-note2"></i>
-                        <p>Projects List</p>
+                        <p><b>Projects List</b></p>
                     </a>
                 </li>
                 
@@ -98,7 +100,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"> &nbsp; Cisco Innovation Edge - Smartsheet Project Tracker</a>
+                    <a class="navbar-brand" href="#"> &nbsp; <b><font color = "blue">CISCO INNOVATION EDGE PROJECT TRACKER</font></b></a>
                 </div>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
@@ -116,22 +118,52 @@
         <div class="content">
             <div class="container-fluid">
                 <div class="row">
+
+
+<div class="col-md-12" >
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"><b><font color = "red">ACTIVE PROJECTS</font></b></h4>
+                                <br/>
+                                <p class="category"><b>We have people on the team currently making progress, regardless of whether it’s consumable yet or not.</b></p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped" id="activetable" class = "activetable" name = "activetable">
+                                       <thead>
+                                        <th><center><b><font color = "blue">Project Name</font></b></center></th>
+                                        <th><center><b><font color = "blue">Description</font></b></center></th>
+                                        <th><center><b><font color = "blue">Audience</font></b></center></th>
+                                        <th><center><b><font color = "blue">Technical Lead</font></b></center></th>
+                                        <th><center><b><font color = "blue">Status</font></b></center></th>
+                                        <th><center><b><font color = "blue">Additional Info</font></b></center></th>
+                                    </thead>
+                                    
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Archive/Incomplete Projects</h4>
-                                <p class="category">Projects that are either in limbo or never really got off the ground, but you can still read about them</p>
+                                <h4 class="title"><b><font color = "red">ARCHIVE/INCOMPLETE PROJECTS</font></b></h4>
+                                <br/>
+                                <p class="category"><b>Projects that are either in limbo or never really got off the ground, but you can still read about them.</b></p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped" id="archivetable" class = "archivetable" name = "archivetable">
 
                                     <thead>
-                                        <th>Project Name</th>
-                                    	<th>Description</th>
-                                    	<th>Audience</th>
-                                    	<th>Technical Lead</th>
-                                    	<th>Status</th>
-                                        <th>Additional Info</th>
+                                        <th><center><b><font color = "blue">Project Name</font></b></center></th>
+                                        <th><center><b><font color = "blue">Description</font></b></center></th>
+                                        <th><center><b><font color = "blue">Audience</font></b></center></th>
+                                        <th><center><b><font color = "blue">Technical Lead</font></b></center></th>
+                                        <th><center><b><font color = "blue">Status</font></b></center></th>
+                                        <th><center><b><font color = "blue">Additional Info</font></b></center></th>
                                     </thead>
                                     
                                 </table>
@@ -145,18 +177,19 @@
                    <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Complete Projects</h4>
-                                <p class="category">Nobody is currently making progress but there are demos and repos available for broader use</p>
+                                <h4 class="title"><b><font color = "red">COMPLETED PROJECTS</font></b></h4>
+                                <br/>
+                                <p class="category"><b>Nobody is currently making progress but there are demos and repos available for broader use.</b></p>
                             </div>
                             <div class="content table-responsive table-full-width">
                                 <table class="table table-hover table-striped" id="completetable" class = "completetable" name = "completetable">
                                         <thead>
-                                        <th>Project Name</th>
-                                        <th>Description</th>
-                                        <th>Audience</th>
-                                        <th>Technical Lead</th>
-                                        <th>Status</th>
-                                        <th>Additional Info</th>
+                                        <th><center><b><font color = "blue">Project Name</font></b></center></th>
+                                        <th><center><b><font color = "blue">Description</font></b></center></th>
+                                        <th><center><b><font color = "blue">Audience</font></b></center></th>
+                                        <th><center><b><font color = "blue">Technical Lead</font></b></center></th>
+                                        <th><center><b><font color = "blue">Status</font></b></center></th>
+                                        <th><center><b><font color = "blue">Additional Info</font></b></center></th>
                                     </thead>
                                     
                                 </table>
@@ -168,18 +201,19 @@
  <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title">Potential Projects</h4>
-                                <p class="category">Projects that we would like to get to but haven’t yet</p>
+                                <h4 class="title"><b><font color = "red">POTENTIAL PROJECTS</font></b></h4>
+                                <br/>
+                                <p class="category"><b>Projects that we would like to get to but haven’t yet.</b></p>
                             </div>
                             <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped">
+                                <table class="table table-hover table-striped" id = "potentialtable" class = "potentialtable" name = "potentialtable">
                                         <thead>
-                                        <th>Project Name</th>
-                                        <th>Description</th>
-                                        <th>Audience</th>
-                                        <th>Technical Lead</th>
-                                        <th>Status</th>
-                                        <th>Additional Info</th>
+                                        <th><center><b><font color = "blue">Project Name</font></b></center></th>
+                                        <th><center><b><font color = "blue">Description</font></b></center></th>
+                                        <th><center><b><font color = "blue">Audience</font></b></center></th>
+                                        <th><center><b><font color = "blue">Technical Lead</font></b></center></th>
+                                        <th><center><b><font color = "blue">Status</font></b></center></th>
+                                        <th><center><b><font color = "blue">Additional Info</font></b></center></th>
                                     </thead>
                                    
 
@@ -189,35 +223,13 @@
                         </div>
                     </div>
 
- <div class="col-md-12">
-                        <div class="card">
-                            <div class="header">
-                                <h4 class="title">Active Projects</h4>
-                                <p class="category">We have people on the team currently making progress, regardless of whether it’s consumable yet or not</p>
-                            </div>
-                            <div class="content table-responsive table-full-width">
-                                <table class="table table-hover table-striped" id="activetable" class = "activetable" name = "activetable">
-                                       <thead>
-                                        <th>Project Name</th>
-                                        <th>Description</th>
-                                        <th>Audience</th>
-                                        <th>Technical Lead</th>
-                                        <th>Status</th>
-                                        <th>Additional Info</th>
-                                    </thead>
-                                    
-
-                                </table>
-
-                            </div>
-                        </div>
-                    </div>
+ 
 
 
                 </div>
             </div>
         </div>
-          <input type="submit" value="Update" id="update">
+          
 
 
         <footer class="footer">
@@ -226,7 +238,7 @@
                     
                 </nav>
                 <p class="copyright pull-right">
-                    &copy; 2017 Cisco Innovation Edge
+                    &copy; <b>2017 Cisco Innovation Edge</b>
                 </p>
             </div>
         </footer>
@@ -246,7 +258,7 @@
 
 <script type=text/javascript>
   $(function() {
-    $("#update").click(function() {
+    $(document).ready(function() {
          $.ajax({
             type: "GET",
             url: $SCRIPT_ROOT + "/processing",
@@ -282,6 +294,7 @@
                 var table = document.getElementById("archivetable");
                 var table2 = document.getElementById("completetable");
                 var table3 = document.getElementById("activetable");
+                var table4 = document.getElementById("potentialtable")
                 //var emptyRow = document.getElementById("empty");
                 //if(emptyRow){
                 //    emptyRow.parentNode.removeChild(emptyRow)
@@ -303,12 +316,31 @@
                     var td5 = tr.appendChild(document.createElement('td'));
                     var td6 = tr.appendChild(document.createElement('td'));
 
+                    var center = document.createElement('center');
+
+
                     td1.innerHTML = newRow1;
+                    td1.style.fontWeight = "bold";
+                    td1.style.textAlign = "center";
                     td2.innerHTML = newRow2;
+                    td2.style.fontWeight = "bold";
+                    td2.style.textAlign = "center";
                     td3.innerHTML = newRow3;
+                    td3.style.fontWeight = "bold";
+                    td3.style.textAlign = "center";
                     td4.innerHTML = newRow4;
+                    td4.style.fontWeight = "bold";
+                    td4.style.textAlign = "center";
                     td5.innerHTML = newRow5;
+                    td5.style.fontWeight = "bold";
+                    td5.style.textAlign = "center";
+                    td5.style.color = "red";
                     td6.innerHTML = newRow6;
+                    td6.style.fontWeight = "bold";
+                    td6.style.textAlign = "center";
+
+                    var b = document.createElement('b');
+                    td1.appendChild(b);
                     
                     tr.appendChild(td1);
                     tr.appendChild(td2);
@@ -318,10 +350,13 @@
                     tr.appendChild(td6);
 
                     var br = document.createElement('br');
+                    var br2 = br.cloneNode(true);
+                    
 
 
                     table.appendChild(tr);
                     table.appendChild(br);
+                    table.appendChild(br2);
 
                    
 
@@ -348,11 +383,24 @@
                     var tdcomp6 = tr.appendChild(document.createElement('td'));
 
                     tdcomp1.innerHTML = compRow1;
+                    tdcomp1.style.fontWeight = "bold";
+                    tdcomp1.style.textAlign = "center";
                     tdcomp2.innerHTML = compRow2;
+                    tdcomp2.style.fontWeight = "bold";
+                    tdcomp2.style.textAlign = "center";
                     tdcomp3.innerHTML = compRow3;
+                    tdcomp3.style.fontWeight = "bold";
+                    tdcomp3.style.textAlign = "center";
                     tdcomp4.innerHTML = compRow4;
+                    tdcomp4.style.fontWeight = "bold";
+                    tdcomp4.style.textAlign = "center";
                     tdcomp5.innerHTML = compRow5;
+                    tdcomp5.style.fontWeight = "bold";
+                    tdcomp5.style.textAlign = "center";
+                    tdcomp5.style.color = "red";
                     tdcomp6.innerHTML = compRow6;
+                    tdcomp6.style.fontWeight = "bold";
+                    tdcomp6.style.textAlign = "center";
                     
                     trcomp.appendChild(tdcomp1);
                     trcomp.appendChild(tdcomp2);
@@ -362,9 +410,12 @@
                     trcomp.appendChild(tdcomp6);
 
                     var br = document.createElement('br');
+                    var br2 = br.cloneNode(true);
 
                     table2.appendChild(trcomp);
                     table2.appendChild(br);
+                    table2.appendChild(br2);
+
 
                    
 
@@ -390,11 +441,24 @@
                     var tddomp6 = tr.appendChild(document.createElement('td'));
 
                     tddomp1.innerHTML = dompRow1;
+                    tddomp1.style.fontWeight = "bold";
+                    tddomp1.style.textAlign = "center";
                     tddomp2.innerHTML = dompRow2;
+                    tddomp2.style.fontWeight = "bold";
+                    tddomp2.style.textAlign = "center";
                     tddomp3.innerHTML = dompRow3;
+                    tddomp3.style.fontWeight = "bold";
+                    tddomp3.style.textAlign = "center";
                     tddomp4.innerHTML = dompRow4;
+                    tddomp4.style.fontWeight = "bold";
+                    tddomp4.style.textAlign = "center";
                     tddomp5.innerHTML = dompRow5;
+                    tddomp5.style.fontWeight = "bold";
+                    tddomp5.style.textAlign = "center";
+                    tddomp5.style.color = "red";
                     tddomp6.innerHTML = dompRow6;
+                    tddomp6.style.fontWeight = "bold";
+                    tddomp6.style.textAlign = "center";
                     
                     trdomp.appendChild(tddomp1);
                     trdomp.appendChild(tddomp2);
@@ -404,9 +468,70 @@
                     trdomp.appendChild(tddomp6);
 
                     var br = document.createElement('br');
+                    var br2 = br.cloneNode(true);
 
                     table3.appendChild(trdomp);
                     table3.appendChild(br);
+                    table3.appendChild(br2);
+
+
+                   
+
+
+                }
+
+
+                for(var i = 0; i < data.pson1.length; i++)
+                {
+                    var pompRow1 = data.pson1[i];
+                    var pompRow2 = data.pson2[i];
+                    var pompRow3 = data.pson3[i];
+                    var pompRow4 = data.pson4[i];
+                    var pompRow5 = data.pson5[i];
+                    var pompRow6 = data.pson6[i];
+                    //var newList = [newRow1, newRow2, newRow3, newRow4, newRow5, newRow6]
+                    var trpomp = document.createElement('tr');
+                    var tdpomp1 = tr.appendChild(document.createElement('td'));
+                    var tdpomp2 = tr.appendChild(document.createElement('td'));
+                    var tdpomp3 = tr.appendChild(document.createElement('td'));
+                    var tdpomp4 = tr.appendChild(document.createElement('td'));
+                    var tdpomp5 = tr.appendChild(document.createElement('td'));
+                    var tdpomp6 = tr.appendChild(document.createElement('td'));
+
+                    tdpomp1.innerHTML = pompRow1;
+                    tdpomp1.style.fontWeight = "bold";
+                    tdpomp1.style.textAlign = "center";
+                    tdpomp2.innerHTML = pompRow2;
+                    tdpomp2.style.fontWeight = "bold";
+                    tdpomp2.style.textAlign = "center";
+                    tdpomp3.innerHTML = pompRow3;
+                    tdpomp3.style.fontWeight = "bold";
+                    tdpomp3.style.textAlign = "center";
+                    tdpomp4.innerHTML = pompRow4;
+                    tdpomp4.style.fontWeight = "bold";
+                    tdpomp4.style.textAlign = "center";
+                    tdpomp5.innerHTML = pompRow5;
+                    tdpomp5.style.fontWeight = "bold";
+                    tdpomp5.style.textAlign = "center";
+                    tdpomp5.style.color = "red";
+                    tdpomp6.innerHTML = pompRow6;
+                    tdpomp6.style.fontWeight = "bold";
+                    tdpomp6.style.textAlign = "center";
+                    
+                    trpomp.appendChild(tdpomp1);
+                    trpomp.appendChild(tdpomp2);
+                    trpomp.appendChild(tdpomp3);
+                    trpomp.appendChild(tdpomp4);
+                    trpomp.appendChild(tdpomp5);
+                    trpomp.appendChild(tdpomp6);
+
+                    var br = document.createElement('br');
+                    var br2 = br.cloneNode(true);
+
+                    table4.appendChild(trpomp);
+                    table4.appendChild(br);
+                    table4.appendChild(br2);
+
 
                    
 
