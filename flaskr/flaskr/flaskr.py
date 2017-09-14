@@ -60,6 +60,19 @@ def fncall():
 	global c6
 	c6 = []
 
+	global d1 
+	d1 = []
+	global d2
+	d2 = []
+	global d3
+	d3 = []
+	global d4
+	d4 = []
+	global d5
+	d5 = []
+	global d6
+	d6 = []
+
 
 	def get_cell_by_column_name(row, column_ame):
 	    column_id = column_map[column_ame]
@@ -101,7 +114,7 @@ def fncall():
 	        info_value = info_cell.display_value
 	        print(str(info_value))
 
-	        if (status_valuetype1 == "Lost"):
+	        if (status_valuetype1 == "Lost" or status_valuetype1 == "Inactive"):
 	        	r1.append(project_value)
 	        	print(str(project_value))
 	        	r2.append(description_value)
@@ -129,6 +142,24 @@ def fncall():
 	        	print(str(status_valuetype1))
 	        	c6.append(info_value)
 	        	print(str(info_value))
+
+	        if (status_valuetype1 == "Active"):
+	        	d1.append(project_value)
+	        	print(str(project_value))
+	        	d2.append(description_value)
+	        	print(str(description_value))
+	        	d3.append(customers_value)
+	        	print(str(customers_value))
+	        	d4.append(techlead_value)
+	        	print(str(techlead_value))
+	        	d5.append(status_valuetype1)
+	        	print(str(status_valuetype1))
+	        	d6.append(info_value)
+	        	print(str(info_value))
+
+
+
+
 
 
 
@@ -174,7 +205,14 @@ def fncall():
 	ctab5 = c5
 	ctab6 = c6
 
+	dtab1 = d1
+	dtab2 = d2
+	dtab3 = d3
+	dtab4 = d4
+	dtab5 = d5
+	dtab6 = d6
+
 
 	
-	return jsonify(json1=result, json2 = secresult, json3 = thirdresult, json4 = fourthresult, json5 = fifthresult, json6 = sixthresult, cson1 = ctab1, cson2 = ctab2, cson3 = ctab3, cson4 = ctab4, cson5 = ctab5, cson6 = ctab6)	
+	return jsonify(json1=result, json2 = secresult, json3 = thirdresult, json4 = fourthresult, json5 = fifthresult, json6 = sixthresult, cson1 = ctab1, cson2 = ctab2, cson3 = ctab3, cson4 = ctab4, cson5 = ctab5, cson6 = ctab6, dson1 = dtab1, dson2 = dtab2, dson3 = dtab3, dson4 = dtab4, dson5 = dtab5, dson6 = dtab6)	
 
