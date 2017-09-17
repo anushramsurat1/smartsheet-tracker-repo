@@ -23,6 +23,22 @@ app = Flask(__name__)
 def index():
     return render_template('table.html')
 
+@app.route('/activetable')
+def activetable():
+    return render_template('activetable.html')
+
+@app.route('/archivetable')
+def archivetable():
+    return render_template('archivetable.html')
+
+@app.route('/completetable')
+def completetable():
+    return render_template('completetable.html')
+
+@app.route('/potentialtable')
+def potentialtable():
+    return render_template('potentialtable.html')
+
 
 @app.route('/processing', methods=['GET'])
 # Install the smartsheet sdk with the command: pip install smartsheet-python-sdk

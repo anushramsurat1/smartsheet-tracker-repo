@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<link rel="icon" type="image/png" href="static/img/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+	<title></title>
+
+	<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="viewport" content="width=device-width" />
+
+
+    <!-- Bootstrap core CSS     -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Animation library for notifications   -->
+    <link href="static/css/animate.min.css" rel="stylesheet"/>
+
+    <!--  Light Bootstrap Table core CSS    -->
+    <link href="static/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
+
+
+    <!--  CSS for Demo Purpose, don't include it in your project     -->
+    <link href="static/css/demo.css" rel="stylesheet" />
+
+
+    <!--     Fonts and icons     -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    <link href="static/css/pe-icon-7-stroke.css" rel="stylesheet" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script type=text/javascript>
+        var $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+
+    <script src="static/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="static/js/bootstrap.min.js" type="text/javascript"></script>
+
+
+    <!--  Checkbox, Radio & Switch Plugins -->
+    <script src="static/js/bootstrap-checkbox-radio-switch.js"></script>
+
+    <!--  Charts Plugin -->
+    <script src="static/js/chartist.min.js"></script>
+
+    <!--  Notifications Plugin    -->
+    <script src="static/js/bootstrap-notify.js"></script>
+
+    <!--  Google Maps Plugin    -->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+
+    <!-- Light Bootstrap Table Core javascript and methods for Demo purpose -->
+    <script src="static/js/light-bootstrap-dashboard.js"></script>
+
+    <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
+    <script src="static/js/demo.js"></script>
+
+
+
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="sidebar" data-color="purple" data-image="static/img/sidebar-5.jpg">
+
+    <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
+
+
+    <div class="sidebar-wrapper">
+            <div class="logo">
+                <a href="http://www.creative-tim.com" class="simple-text">
+                    <b>IE PROJECT DASHBOARD PORTAL</b>
+                </a>
+            </div>
+
+            <ul class="nav">
+            <br/>
+                    
+                <li class="active">
+                    <a href="/">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Projects List</b></p>
+                    </a>
+                </li>
+                
+                <li >
+                    <a href="/activetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Active Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/archivetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Inactive/Lost Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/completetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Completed Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/potentialtable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Potential Projects</b></p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="main-panel">
+        <nav class="navbar navbar-default navbar-fixed">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"> &nbsp; <b><font color = "royalblue">CISCO INNOVATION EDGE PROJECT TRACKER</font></b></a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        
+                    </ul>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+
+<div class="col-md-12">
+                        <div class="card">
+                            <div class="header">
+                                <h4 class="title"><b><font color = "red">INACTIVE/LOST PROJECTS</font></b></h4>
+                                <br/>
+                                <p class="category"><b>Projects that are either in limbo or never really got off the ground, but you can still read about them.</b></p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover table-striped" id="archivetable" class = "archivetable" name = "archivetable">
+
+                                    <thead>
+                                        <th><center><b><font color = "blue">Project Name</font></b></center></th>
+                                        <th><center><b><font color = "blue">Description</font></b></center></th>
+                                        <th><center><b><font color = "blue">Audience</font></b></center></th>
+                                        <th><center><b><font color = "blue">Technical Lead</font></b></center></th>
+                                        <th><center><b><font color = "blue">Status</font></b></center></th>
+                                        <th><center><b><font color = "blue">Additional Info/Links</font></b></center></th>
+                                    </thead>
+                                    
+                                </table>
+                                <div id="activezz" name = "activezz" class = "activezz"> </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+        <footer class="footer">
+            <div class="container-fluid">
+                <nav class="pull-left">
+                    
+                </nav>
+                <p class="copyright pull-right">
+                    &copy; <b>2017 Cisco Innovation Edge</b>
+                </p>
+            </div>
+        </footer>
+
+
+    </div>
+</div>
+
+
+
+    
+
+</body>
+
+
+
+
+<script type=text/javascript>
+  $(function() {
+    $(document).ready(function() {
+         $.ajax({
+            type: "GET",
+            url: $SCRIPT_ROOT + "/processing",
+            contentType: "application/json; charset=utf-8",
+            //data: result,
+            
+            success: function(data) {
+
+                //console.log(data.json1[1]);
+                var len = data.json1.length;
+                //for(i=0;i<=len;i++)
+                //{
+                //var x = document.createElement("SPAN");
+                //var t = document.createTextNode(data.json1[i]);
+                //x.appendChild(t);
+                //var sp = document.getElementById('result2');
+                //sp.innerHTML += x;
+
+                
+
+                //var newTablerow=document.createElement('div');
+                //var html = '<tbody id="incompbody">';
+                //var lst = Object.keys(data.json1);
+                //for(var i = 0; i < data.json1.length; i++) {
+                //    html += "<tr value='incomp-row"+ i +"' id='incomp-row" + i + "' name='incomp-row" + i + "'>" + data.json1[i] + "</tr>";
+                //}
+                //html += '</tbody>';
+                //newTablerow.innerHTML= html;
+                //document.getElementById("activezz").appendChild(newTablerow);
+
+
+                
+                var table = document.getElementById("archivetable");
+                
+                //var emptyRow = document.getElementById("empty");
+                //if(emptyRow){
+                //    emptyRow.parentNode.removeChild(emptyRow)
+                //}
+                for(var i = 0; i < data.json1.length; i++)
+                {
+                    var newRow1 = data.json1[i];
+                    var newRow2 = data.json2[i];
+                    var newRow3 = data.json3[i];
+                    var newRow4 = data.json4[i];
+                    var newRow5 = data.json5[i];
+                    var newRow6 = data.json6[i];
+                    //var newList = [newRow1, newRow2, newRow3, newRow4, newRow5, newRow6]
+                    var tr = document.createElement('tr');
+                    var td1 = tr.appendChild(document.createElement('td'));
+                    var td2 = tr.appendChild(document.createElement('td'));
+                    var td3 = tr.appendChild(document.createElement('td'));
+                    var td4 = tr.appendChild(document.createElement('td'));
+                    var td5 = tr.appendChild(document.createElement('td'));
+                    var td6 = tr.appendChild(document.createElement('td'));
+
+                    var center = document.createElement('center');
+
+
+                    td1.innerHTML = newRow1;
+                    td1.style.fontWeight = "bold";
+                    td1.style.textAlign = "center";
+                    td2.innerHTML = newRow2;
+                    td2.style.fontWeight = "bold";
+                    td2.style.textAlign = "center";
+                    td3.innerHTML = newRow3;
+                    td3.style.fontWeight = "bold";
+                    td3.style.textAlign = "center";
+                    td4.innerHTML = newRow4;
+                    td4.style.fontWeight = "bold";
+                    td4.style.textAlign = "center";
+                    td5.innerHTML = newRow5;
+                    td5.style.fontWeight = "bold";
+                    td5.style.textAlign = "center";
+                    td5.style.color = "red";
+                    td6.innerHTML = newRow6;
+                    td6.style.fontWeight = "bold";
+                    td6.style.textAlign = "center";
+
+                    var b = document.createElement('b');
+                    td1.appendChild(b);
+                    
+                    tr.appendChild(td1);
+                    tr.appendChild(td2);
+                    tr.appendChild(td3);
+                    tr.appendChild(td4);
+                    tr.appendChild(td5);
+                    tr.appendChild(td6);
+
+                    var br = document.createElement('br');
+                    var br2 = br.cloneNode(true);
+                    
+
+
+                    table.appendChild(tr);
+                    table.appendChild(br);
+                    table.appendChild(br2);
+
+                   
+
+
+                }
+
+                
+
+
+
+                
+                   //$("#result2").text(data.json1[i]);
+                   //console.log(data.json1[i]);
+                  //  html1 = 
+                  //  html1 += "<option value='sgt-policy-matrix"+ i +"' id='sgt-policy-matrix" + i + "' name='sgt-policy-matrix" + i + "'>" + lst[i] + " (" + data.result[lst[i]] + ")" +"</option>";
+
+                //}    
+                console.log(len);
+                //$("#result2").text(data.json1);
+
+                console.log('Hello');
+            }
+        });     
+    });
+  });
+</script>
+
+
+
+
+
+   
+
+
+
+</html>

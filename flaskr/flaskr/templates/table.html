@@ -86,6 +86,37 @@
                     </a>
                 </li>
                 
+                <li >
+                    <a href="/activetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Active Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/archivetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Inactive/Lost Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/completetable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Completed Projects</b></p>
+                    </a>
+                </li>
+
+                 <li >
+                    <a href="/potentialtable">
+
+                        <i class="pe-7s-note2"></i>
+                        <p><b>Potential Projects</b></p>
+                    </a>
+                </li>
             </ul>
     	</div>
     </div>
@@ -150,7 +181,7 @@
                     <div class="col-md-12">
                         <div class="card">
                             <div class="header">
-                                <h4 class="title"><b><font color = "red">ARCHIVE/INCOMPLETE PROJECTS</font></b></h4>
+                                <h4 class="title"><b><font color = "red">INACTIVE/LOST PROJECTS</font></b></h4>
                                 <br/>
                                 <p class="category"><b>Projects that are either in limbo or never really got off the ground, but you can still read about them.</b></p>
                             </div>
@@ -294,7 +325,7 @@
                 var table = document.getElementById("archivetable");
                 var table2 = document.getElementById("completetable");
                 var table3 = document.getElementById("activetable");
-                var table4 = document.getElementById("potentialtable")
+                var table4 = document.getElementById("potentialtable");
                 //var emptyRow = document.getElementById("empty");
                 //if(emptyRow){
                 //    emptyRow.parentNode.removeChild(emptyRow)
@@ -557,6 +588,12 @@
   });
 </script>
 
+
+<script>
+$(function(){  // $(document).ready shorthand
+  $('#activetable').fadeIn('slow');
+});
+</script>
 
 
 
