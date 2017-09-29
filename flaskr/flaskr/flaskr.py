@@ -40,6 +40,7 @@ def potentialtable():
     return render_template('potentialtable.html')
 
 
+
 @app.route('/processing', methods=['GET'])
 # Install the smartsheet sdk with the command: pip install smartsheet-python-sdk
 def fncall():
